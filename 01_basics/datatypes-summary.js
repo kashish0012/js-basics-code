@@ -32,10 +32,39 @@ const myFunction = function(){
     console.log("Hello world");
 }  // datatype - function Object
 
-console.log(typeof anotherId);
-console.log(typeof scoreValue);
-console.log(typeof outsideTemp);
-console.log(typeof bigNumber);
-console.log(typeof heros);
-console.log(typeof myObj);
-console.log(typeof myFunction);
+// console.log(typeof anotherId);
+// console.log(typeof scoreValue);
+// console.log(typeof outsideTemp);
+// console.log(typeof bigNumber);
+// console.log(typeof heros);
+// console.log(typeof myObj);
+// console.log(typeof myFunction);
+
+
+//******************Memory********************** */
+
+// Stack (Primitive), Heap (Non-Primitive)
+
+let myName = "kashishkumarsingh"
+
+let anotherName = myName;
+anotherName = "HarshitKumarSingh"
+
+console.log(myName);
+console.log(anotherName);
+
+// In sack memory, if we change the value of any variable then the change is done in the copy of that value.
+
+let userOne = {
+    email: "user@gmail.com",
+    upi: "user@axl"
+}
+
+let userTwo = userOne;
+
+userTwo.email = "kashish@google.com";
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+// In Heap memory, we get reference of any scoreValue, means if we're changing the value then original value gets changed.
