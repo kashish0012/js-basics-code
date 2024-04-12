@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h1>JavaScript Async</h1>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const sayKashish = () =>{
+        console.log("Kashish");
+    }
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "Event JavaScript";
+    }
+
+    const changeMe = setTimeout(changeText, 2000); //runs single time
+    document.querySelector('#stop').addEventListener('click', ()=>{
+        clearTimeout(changeMe);
+        console.log('STOPPED');
+    })
+</script>
+</html>
